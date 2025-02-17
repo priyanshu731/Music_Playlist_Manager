@@ -17,10 +17,10 @@ Upload New Song
 --------------------------------------------------------------------------------------------------------
 
 Project Structure:
-•	Organized files into logical directories
-•	Separate files for models, forms, routes, and configuration
-•	Static folder for CSS, JavaScript, and uploaded files
-•	Templates folder for HTML files
+- Organized files into logical directories
+- Separate files for models, forms, routes, and configuration
+- Static folder for CSS, JavaScript, and uploaded files
+- Templates folder for HTML files
 
 
 Features:
