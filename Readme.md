@@ -4,7 +4,7 @@ I've created a complete Music Playlist Manager using Flask. Here's a breakdown o
 
 
 -------------------------------------------Homepage------------------------------------------
- 
+ ![Image Alt](https://github.com/priyanshu731/Music_Playlist_Manager/blob/0da3235f03fecd725e908fc01aaec022f7e824cd/templates/screenshot/CreateNewPlaylist.png)
 ----------------------------------------Create New Page--------------------------------------
  
 -------------------------------------------Playlist------------------------------------------
