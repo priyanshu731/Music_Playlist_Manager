@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="page-title">Your Playlists</h1>
+            <a href="{{ url_for('main.create_playlist') }}" class="btn btn-primary">
+                <i class="bi bi-plus-lg"></i> Create New Playlist
+            </a>
+        </div>
+        
+        <div class="row g-4">
+            {% for playlist in playlists %}
+            <div class="col-md-4">
+                <div class="playlist-card">
+                    <div class="playlist-icon">
+                        <i class="bi bi-music-note-list"></i>
+                    </div>
+                    <div class="playlist-info">
+                        <h5>{{ playlist.name }}</h5>
+                        <p class="text-muted">{{ playlist.description }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-light text-dark">
+                                <i class="bi bi-music-note"></i> {{ playlist.songs|length }} songs
+                            </span>
+                            <a href="{{ url_for('main.view_playlist', playlist_id=playlist.id) }}" 
+                               class="btn btn-outline-primary btn-sm">
+                                <i class="bi bi-play-fill"></i> View Playlist
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

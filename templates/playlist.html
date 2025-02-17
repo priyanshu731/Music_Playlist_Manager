@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if playlist %}
+    <div class="playlist-header">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <h1>{{ playlist.name }}</h1>
+                <p class="text-muted">{{ playlist.description }}</p>
+            </div>
+            <a href="{{ url_for('main.upload_song', playlist_id=playlist.id) }}" 
+               class="btn btn-primary">
+                <i class="bi bi-plus-lg"></i> Add Song
+            </a>
+        </div>
+    </div>
+    
+    <div class="songs-container mt-4">
+        {% for song in playlist.songs %}
+        <div class="song-card">
+            <div class="song-info">
+                <div class="song-title">
+                    <i class="bi bi-music-note"></i>
+                    <h5>{{ song.title }}</h5>
+                </div>
+                <p class="artist">{{ song.artist }}</p>
+            </div>
+            <div class="audio-player">
+                <audio controls preload="none" class="custom-audio-player">
+                    <source src="{{ url_for('static', filename=song.file_path) }}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="form-container">
+        <h1>Create New Playlist</h1>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div class="mb-3">
+                {{ form.name.label(class="form-label") }}
+                {{ form.name(class="form-control") }}
+            </div>
+            <div class="mb-3">
+                {{ form.description.label(class="form-label") }}
+                {{ form.description(class="form-control") }}
+            </div>
+            {{ form.submit(class="btn btn-primary") }}
+        </form>
+    </div>
+{% endif %}
+{% endblock %}
