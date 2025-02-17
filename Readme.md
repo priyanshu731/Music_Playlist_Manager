@@ -4,13 +4,13 @@ I've created a complete Music Playlist Manager using Flask. Here's a breakdown o
 
 
 -------------------------------------------Homepage------------------------------------------
- ![Image Alt](https://github.com/priyanshu731/Music_Playlist_Manager/blob/0da3235f03fecd725e908fc01aaec022f7e824cd/templates/screenshot/CreateNewPlaylist.png)
+ ![Image Alt](https://github.com/priyanshu731/Music_Playlist_Manager/blob/64a8c2a4d00902a7d5d1e7d154e4d64f0f4468bc/templates/screenshot/Homepage.png)
 ----------------------------------------Create New Page--------------------------------------
- 
+ ![Image Alt](https://github.com/priyanshu731/Music_Playlist_Manager/blob/0da3235f03fecd725e908fc01aaec022f7e824cd/templates/screenshot/CreateNewPlaylist.png)
 -------------------------------------------Playlist------------------------------------------
- 
+ ![Image Alt](https://github.com/priyanshu731/Music_Playlist_Manager/blob/64a8c2a4d00902a7d5d1e7d154e4d64f0f4468bc/templates/screenshot/Playlist.png)
 ----------------------------------------Upload New Song--------------------------------------
- 
+ ![Image Alt](https://github.com/priyanshu731/Music_Playlist_Manager/blob/64a8c2a4d00902a7d5d1e7d154e4d64f0f4468bc/templates/screenshot/UploadSong.png)
 
 Project Structure:
 Organized files into logical directories
